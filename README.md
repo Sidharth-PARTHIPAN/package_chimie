@@ -12,11 +12,18 @@ Ce projet est réalisé dans le cadre du module Python du Master.
 
 
 ```bash
-├───chempkg
-│   │   atom.py
-│   │   mol.py
-│   │   reaction_utils.py
-│   │   __init__.py
+package_chimie/
+├── chempkg/
+│ ├── atom.py
+│ ├── mol.py
+│ ├── reaction_utils.py
+│ └── __init__.py
+└── tests
+    ├── test_atom.py
+    ├── test_molecule.py
+    └── test_reactions_utils.py
+└── README.md
+└── pyproject.toml
 ```
 
 
@@ -101,4 +108,37 @@ from chempkg.reaction_utils import kinetic_decomp
 
 A_t = kinetic_decomp(0.1, 0.5, 5, steps=10)
 print(A_t)
+```
+
+## Installation
+
+Prérequis : Python 3.10 - 3.12
+
+1. Créer et activer un environnement virtuel (Windows)
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1   # PowerShell
+# ou
+.venv\Scripts\activate.bat   # cmd.exe
+```
+
+2. Installer le package localement (mode développement)
+```bash
+pip install -e .
+```
+Ou installer depuis les sources (mode standard)
+```bash
+pip install .
+```
+
+3. Installer les dépendances de développement et lancer les tests
+```bash
+pip install pytest
+pytest -q
+```
+
+4. Lancer l'exemple
+Depuis le dossier `package_chimie` :
+```bash
+python run_example.py
 ```
