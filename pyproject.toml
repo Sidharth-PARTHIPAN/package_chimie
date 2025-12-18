@@ -5,7 +5,7 @@ name = "chempkg"
 # Version du package
 version = "0.1.0"
 authors = [
-    { name = "Sidharth", email = "Sidharth.Parthipan@sorbonne-universite.fr" }
+    { name = "Sidharth", email = "Sidharth.Parthipan@etu.sorbonne-universite.fr" }
 ]
 description = "Package Python pour manipuler des atomes, molécules et réactions chimiques simples"
 # Versions de Python compatibles
